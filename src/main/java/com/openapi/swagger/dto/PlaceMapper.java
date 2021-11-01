@@ -4,9 +4,8 @@ import com.openapi.swagger.mysql.Place;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-@Mapper
-//        (unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
 public interface PlaceMapper {
 
-    PlaceDTO map(Place place);
+    PlaceDTO mapSourceToDestination(Place place);
 }
